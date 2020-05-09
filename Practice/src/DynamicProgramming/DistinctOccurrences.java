@@ -2,7 +2,10 @@ package DynamicProgramming;
 
 //{ Driver Code Starts
 import java.util.*;
-
+/*
+ * Time Complexity : O(n2)
+ * Space Complexity = O(n2)
+ */
 public class DistinctOccurrences
 {
 	public static void main(String args[])
