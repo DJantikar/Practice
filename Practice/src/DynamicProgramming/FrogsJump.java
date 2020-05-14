@@ -17,7 +17,7 @@ public class FrogsJump
      while(t-- > 0)
      {
          int n = sc.nextInt();
-         System.out.println(new Hops().countWays(n));
+         System.out.println(new Hops().countWaysOrderDoesNotMatter(n));
          
      }
  }
@@ -50,6 +50,22 @@ class Hops
          dp[i]=(dp[i-1]+dp[i-2]+dp[i-3])%modulo;
      }
      return dp[n-1]%modulo;
+ }
+//function to find number of ways 
+ static Long countWaysOrderDoesNotMatter(int m){
+     
+    if(m==1 || m==2){
+         return (long)m;
+     }
+     long dp[] = new long[m+1];
+     dp[1]=1;
+     dp[2]=2;
+     Arrays.fill(dp,1);
+     dp[0]=0;
+     for(int step=3;step<=m;step++){
+      dp[step]=1+dp[step-2];
+     }
+     return dp[m];
  }
  
 }
