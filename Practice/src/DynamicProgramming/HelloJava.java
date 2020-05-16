@@ -11,6 +11,7 @@ class SortByLengthComparator implements Comparator<String>{
 		return s1.length() - s2.length();
 	}	
 }
+
 public class HelloJava {
 	public static void main(String[] args) {
 		/*Input : Hi World Java
